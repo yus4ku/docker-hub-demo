@@ -11,6 +11,7 @@ RUN mkdir -p "${GOPATH}"
 RUN go get -v github.com/go-martini/martini
 
 # Run httpd
+ENV PORT 8080
+EXPOSE 8080
 ADD httpd.go /root/httpd.go
-EXPOSE 3000
 CMD ["go", "run", "/root/httpd.go"]
