@@ -12,4 +12,5 @@ RUN go get -v github.com/go-martini/martini
 
 # Run httpd
 ADD httpd.go /root/httpd.go
-RUN go run /root/httpd.go &
+EXPOSE 3000
+CMD ["go", "run", "/root/httpd.go"]
