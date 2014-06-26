@@ -7,7 +7,7 @@ import (
 func main() {
 	m := martini.Classic()
 	m.Get("/", func() string {
-		return "Hello"
+		return "Hello\n"
 	})
 	m.Run()
 }
